@@ -1,5 +1,5 @@
 module MyAttrAccessor
-	def self.included(base)
+  def self.included(base)
     base.extend ClassMethods
   end
 
@@ -27,8 +27,8 @@ class Person
 end
 
 p = Person.new
-p.age = 19
-p.age   ## === 19
+p.age=19
+puts p.age   ## === 19
 
 p.age = 17 ## == Invalid Attribute error
 
