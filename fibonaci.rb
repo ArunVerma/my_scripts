@@ -3,7 +3,6 @@
 # input 1 : first number of the series
 # input 2 : second number of the series
 # input 3 : length of the series
-# return print the series array
 # Program will start on creating new object of FibonaciSeries class.
 # FibonaciSeries.new
 
