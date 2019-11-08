@@ -28,3 +28,32 @@ arr2.each_with_index do |n, i|
 	if(n%5 == 0)
 		arr2[i] = arr2[i]+'Buzz'
 end
+
+		
+# Find nth repeated number
+def nth_repeated_element(array, n)
+    arr_hash = {}
+    count = 0
+    array.each do |a|
+       if arr_hash.keys.include?(a)
+           arr_hash[a] = arr_hash[a] + 1
+           if(arr_hash[a] == 2)
+               count += 1
+               if count == n # return element when found
+                   return a
+							 end
+           else
+               next
+           end
+       else
+            arr_hash[a] = 1
+       end
+    end
+end
+
+p nth_repeated_element([3,4,3,4], 1) # 3
+p nth_repeated_element([3,4,3,4], 2) # 4
+
+p nth_repeated_element([3,4,4,3], 1) # 4
+
+puts nth_repeated_element([3,4,4,4,3], 2) # 3
